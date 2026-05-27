@@ -1,196 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1>My Portfolio</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#achievements">Achievements</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshavardhana V — AI Engineer & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Harshavardhana V — AI Engineer, Full-Stack Developer, and Computer Science graduate specializing in agentic workflows and voice AI systems.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <div class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title"> I'm Harshavardhana V</h1>
-                <p class="hero-subtitle">Creative Computer Science Student | Innovator | Problem Solver</p>
-                <p class="hero-description">
-                    Welcome to my portfolio! Join me on my journey as I explore the intersection of technology and creativity, working on impactful projects that solve real-world problems.
-                </p>
-                <button class="explore-btn" onclick="window.location.href='#about'">Explore My Work</button>
-            </div>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">HV</div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#focus" class="nav-link" data-section="focus">Focus</a></li>
+      <li><a href="#work" class="nav-link" data-section="work">Work</a></li>
+      <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light / dark">
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#focus" class="mob-link">Focus</a></li>
+      <li><a href="#work" class="mob-link">Work</a></li>
+      <li><a href="#gallery" class="mob-link">Gallery</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-tag fade-up" style="--d:0ms">
+        <span class="tag-dot"></span>
+        Mysuru, India — Available for Opportunities
+      </div>
+      <h1 class="hero-headline fade-up" style="--d:120ms">
+        Building <em>intelligent</em><br>systems that scale.
+      </h1>
+      <p class="hero-sub fade-up" style="--d:240ms">
+        I am Harshavardhana V — a final-year Computer Science graduate specializing in agentic AI workflows, voice systems, and full-stack web platforms. I turn complex problems into purposeful digital products.
+      </p>
+      <div class="hero-cta fade-up" style="--d:360ms">
+        <a href="#work" class="cta-primary">View Selected Work</a>
+        <a href="#contact" class="cta-secondary">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-stats fade-up" style="--d:480ms">
+      <div class="stat">
+        <div class="stat-num">14+</div>
+        <div class="stat-label">Projects </div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Internships</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Freelancing</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <div class="stat-num">B.E.</div>
+        <div class="stat-label">CS &amp; Design</div>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll-cue" aria-label="Scroll down">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19,12 12,19 5,12"/></svg>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section bg-alt" id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-media reveal-left">
+          <div class="about-photo-wrap">
+            <img src="my-photo.jpg" alt="Harshavardhana V" class="about-photo">
+            <div class="about-photo-overlay"></div>
+          </div>
         </div>
-
-        <section id="about" class="section">
-            <h3 class="section-title">About Me</h3>
-            <div class="about">
-                <img src="my-photo.jpg" alt="About Me" class="about-img">
-                <div class="about-content">
-                    <p>
-                        Innovative and solutions-driven final-year Computer Science & Design student at the University of Mysore, passionate about translating complex concepts into impactful, real-world applications. Known for analytical thinking, adaptability, and collaboration, I bring creativity and technical insight to every challenge while striving to create purposeful technology solutions.                    </p>
-                </div>
+        <div class="about-content reveal-right">
+          <div class="section-label">About</div>
+          <h2 class="section-title">Crafting solutions at the intersection of AI and human experience.</h2>
+          <div class="title-rule"></div>
+          <p class="about-text">
+            I specialize in developing AI pipelines, natural language workflows, and responsive frontends. My work bridges complex machine learning concepts with clean, accessible interfaces — built to serve real users, not just to demonstrate technology.
+          </p>
+          <p class="about-text">
+            I believe good software is invisible — it solves problems without friction. This philosophy drives every technical and design decision I make.
+          </p>
+          <div class="about-grid-facts">
+            <div class="fact">
+              <div class="fact-key">Education</div>
+              <div class="fact-val">Mysore University School of Engineering</div>
             </div>
-        </section>
-
-        <section id="projects" class="projects-section">
-            <h3 class="section-title">Projects</h3>
-            <div class="projects-container">
-
-                <!-- Existing Projects -->
-                <div class="project-card">
-                    <img src="driver-distracted.jpg" alt="Driver Distraction Detection System" class="project-img">
-                    <div class="project-content">
-                        <h4 class="project-title">Driver Distraction Detection Systems in Vehicles</h4>
-                        <p class="project-duration"><strong class="completed">Completed</strong></p>
-                        <p class="project-description">
-                            Driver distraction detection systems use AI and advanced sensors to monitor behaviors and improve road safety, preventing accidents caused by fatigue or inattention.
-                        </p>
-                        <a href="https://github.com/your-github-profile" target="_blank" class="github-link">View</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="ai-human-body.jpg" alt="Artificial Intelligence in Human Body Parts" class="project-img">
-                    <div class="project-content">
-                        <h4 class="project-title">Artificial Intelligence in Human Body Parts</h4>
-                        <p class="project-duration"><strong class="ongoing">Ongoing</strong></p>
-                        <p class="project-description">
-                            Using AI to enhance prosthetics and organ transplant outcomes, improving patient care and the functionality of artificial body parts.
-                        </p>
-                        <a href="https://github.com/your-github-profile" target="_blank" class="github-link">View</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="ai-human-body.jpg" alt="Network Mission in Space" class="project-img">
-                    <div class="project-content">
-                        <h4 class="project-title">Network Mission in Space Using Integrated Satellites</h4>
-                        <p class="project-duration"><strong class="ongoing">Ongoing</strong></p>
-                        <p class="project-description">
-                            Developing satellite-based networks to create reliable communication infrastructures for space exploration and global telecommunications.
-                        </p>
-                        <a href="https://github.com/your-github-profile" target="_blank" class="github-link">View</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="soldier-safety.jpg" alt="Soldier Safety Enhancement Solution" class="project-img">
-                    <div class="project-content">
-                        <h4 class="project-title">Soldier Safety Enhancement Solution</h4>
-                        <p class="project-duration"><strong class="completed">Completed</strong></p>
-                        <p class="project-description">
-                            A solution that integrates advanced technologies to improve soldier safety in combat, contributing to BEML’s defense technology advancements.
-                        </p>
-                        <a href="https://github.com/your-github-profile" target="_blank" class="github-link">View</a>
-                    </div>
-                </div>
-
-                <!-- New Added Projects -->
-                <div class="project-card">
-                    <img src="museunity.jpg" alt="MuseUnity Portal" class="project-img">
-                    <div class="project-content">
-                        <h4 class="project-title">MUSEUNITY – Centralized College Portal</h4>
-                        <p class="project-duration"><strong class="completed">Jun 2025 – Aug 2025</strong></p>
-                        <p class="project-description">
-                            Conceived and led the development of a unified digital platform connecting students, faculty, and alumni. Served as Frontend Developer and UI/UX Designer using Firebase Authentication and Firestore.
-                        </p>
-                        <a href="https://github.com/your-github-profile/museunity" target="_blank" class="github-link">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="homeease.jpg" alt="HomeEase Platform" class="project-img">
-                    <div class="project-content">
-                        <h4 class="project-title">HomeEase – On-Demand Home Services Platform</h4>
-                        <p class="project-duration"><strong class="ongoing">Sep 2025 – Oct 2025</strong></p>
-                        <p class="project-description">
-                            Full-stack web platform connecting users with verified service providers. Implemented with Firebase, Firestore, and n8n for automation and scalability.
-                        </p>
-                        <a href="https://github.com/your-github-profile/homeease" target="_blank" class="github-link">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="adas-ai.jpg" alt="AI Evolution for ADAS/AD" class="project-img">
-                    <div class="project-content">
-                        <h4 class="project-title">Evolution of AI for ADAS/AD Applications</h4>
-                        <p class="project-duration"><strong class="ongoing">Oct 2025 – Present</strong></p>
-                        <p class="project-description">
-                            Research project on evolution of AI in Advanced Driver Assistance Systems, exploring rule-based automation to deep learning-based perception and decision-making.
-                        </p>
-                        <a href="https://github.com/your-github-profile/adas-ai" target="_blank" class="github-link">GitHub</a>
-                    </div>
-                </div>
-
+            <div class="fact">
+              <div class="fact-key">Focus</div>
+              <div class="fact-val">Agentic AI &amp; Full-Stack Development</div>
             </div>
-        </section>
-
-        <section id="achievements" class="section">
-            <h3>Achievements</h3>
-            <div class="achievements">
-                <div class="achievement-card">
-                    <h4>Approved Innovation for Soldier Protection – BEML Ltd.</h4>
-                    <p>Developed a pioneering solution to enhance soldier safety, which was approved for implementation at BEML. This innovation contributes to advancements in defense technology, improving operational safety measures, reducing risks, and aligning with BEML’s commitment to cutting-edge solutions for defense operations.</p>
-                </div>
+            <div class="fact">
+              <div class="fact-key">Location</div>
+              <div class="fact-val">Mysuru, Karnataka, India</div>
             </div>
-        </section>
-
-        <section id="gallery" class="section">
-            <h3>Gallery</h3>
-            <div class="gallery">
-                <!-- Existing Gallery -->
-                <div class="gallery-item"><img src="gallery1.jpg" alt=""><p>UX design for personal website.</p></div>
-                <div class="gallery-item"><img src="gallery2.jpg" alt=""><p>Tinder for Dogs 🐶 project mockups.</p></div>
-                <div class="gallery-item"><img src="gallery3.jpg" alt=""><p>Python mini projects collection.</p></div>
-                <div class="gallery-item"><img src="gallery4.jpg" alt=""><p>Nature photography shots.</p></div>
-                <div class="gallery-item"><img src="gallery5.jpg" alt=""><p>MySQL database learning progress.</p></div>
-                <div class="gallery-item"><img src="gallery6.jpg" alt=""><p>Figma UX design prototypes.</p></div>
-
-                <!-- Added More Gallery Items -->
-                <div class="gallery-item"><img src="gallery7.jpg" alt=""><p>Morning stillness framed in sunlight — where time slows and nature speaks in silence.</p></div>
-                <div class="gallery-item"><img src="gallery8.jpg" alt=""><p>Moody / VSCO aesthetic
-
-                    “Red like calm chaos — fading into stillness..</p></div>
-                <div class="gallery-item"><img src="gallery9.jpg" alt=""><p>Between tracks, skies, and songs — peace found.</p></div>
-                <div class="gallery-item"><img src="gallery10.jpg" alt=""><p>Palace silhouettes and a sky that remembers...</p></div>
+            <div class="fact">
+              <div class="fact-key">Interests</div>
+              <div class="fact-val">Innovation, Photography, Philately</div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/harshavardhana-v-439047294" target="_blank">LinkedIn</a>
-                <a href="https://x.com/prince_harsha__?s=21" target="_blank">X (Twitter)</a>
-                <a href="https://vs.co/qh2h5z4h" target="_blank">VSCO</a>
+  <!-- FOCUS / OPEN TO WORK -->
+  <section class="section otw-section" id="focus">
+    <div class="container">
+      <div class="otw-header reveal-up">
+        <div class="otw-badge">
+          <span class="otw-pulse"></span>
+          Open to Work
+        </div>
+        <h2 class="section-title">Actively seeking roles in the following capacities</h2>
+      </div>
+    </div>
+    <div class="marquee-outer reveal-up" style="--d:100ms">
+      <div class="marquee-track">
+        <span class="chip">AI Engineer</span>
+        <span class="chip">Generative AI Developer</span>
+        <span class="chip">Agentic AI Developer</span>
+        <span class="chip">Software Engineer</span>
+        <span class="chip">Full Stack Developer</span>
+        <span class="chip">Python Developer</span>
+        <span class="chip">NLP Engineer</span>
+        <span class="chip">Machine Learning Engineer</span>
+        <span class="chip">Voice AI Developer</span>
+        <span class="chip">AI Product Developer</span>
+        <span class="chip">Backend Developer</span>
+        <span class="chip">AI Automation Developer</span>
+        <span class="chip">Prompt Engineer</span>
+        <span class="chip">Real-Time AI Systems Developer</span>
+        <span class="chip">Web Developer</span>
+        <span class="chip">Data Analyst</span>
+        <span class="chip">Applied AI Engineer</span>
+        <span class="chip">Conversational AI Developer</span>
+        <span class="chip">LLM Application Developer</span>
+        <span class="chip">UI/UX-focused Developer</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="chip">AI Engineer</span>
+        <span class="chip">Generative AI Developer</span>
+        <span class="chip">Agentic AI Developer</span>
+        <span class="chip">Software Engineer</span>
+        <span class="chip">Full Stack Developer</span>
+        <span class="chip">Python Developer</span>
+        <span class="chip">NLP Engineer</span>
+        <span class="chip">Machine Learning Engineer</span>
+        <span class="chip">Voice AI Developer</span>
+        <span class="chip">AI Product Developer</span>
+        <span class="chip">Backend Developer</span>
+        <span class="chip">AI Automation Developer</span>
+        <span class="chip">Prompt Engineer</span>
+        <span class="chip">Real-Time AI Systems Developer</span>
+        <span class="chip">Web Developer</span>
+        <span class="chip">Data Analyst</span>
+        <span class="chip">Applied AI Engineer</span>
+        <span class="chip">Conversational AI Developer</span>
+        <span class="chip">LLM Application Developer</span>
+        <span class="chip">UI/UX-focused Developer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <div class="section-label">Projects</div>
+        <h2 class="section-title">Selected Work</h2>
+        <div class="title-rule"></div>
+      </div>
+
+      <div class="work-grid">
+
+        <article class="work-card work-card--wide reveal-up" style="--d:0ms">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80" alt="DoctoTalk AI Healthcare Platform" loading="lazy">
+          </div>
+          <div class="work-info">
+            <div class="work-tags">
+              <span>ASR</span><span>LLM</span><span>Healthcare</span>
+            </div>
+            <h3 class="work-title">DoctoTalk</h3>
+            <p class="work-desc">AI platform for real-time doctor-patient conversation transcription, generating structured summaries and prescriptions from live clinical dialogue.</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal-up" style="--d:80ms">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1590608897129-79da98d15969?auto=format&fit=crop&w=800&q=80" alt="AI Voice Calling Assistant" loading="lazy">
+          </div>
+          <div class="work-info">
+            <div class="work-tags">
+              <span>Gemini API</span><span>Twilio</span>
+            </div>
+            <h3 class="work-title">Voice Assistant</h3>
+            <p class="work-desc">Low-latency conversational voice agent handling live telephony calls with real-time language understanding.</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal-up" style="--d:160ms">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="CareerPath AI" loading="lazy">
+          </div>
+          <div class="work-info">
+            <div class="work-tags">
+              <span>NLP</span><span>Streamlit</span><span>Pandas</span>
+            </div>
+            <h3 class="work-title">CareerPath AI</h3>
+            <p class="work-desc">Intelligent career recommendation engine that parses resume skills and suggests targeted learning paths.</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal-up" style="--d:0ms">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Smile Bright Sophie Voice AI" loading="lazy">
+          </div>
+          <div class="work-info">
+            <div class="work-tags">
+              <span>LiveKit</span><span>Deepgram</span><span>FastAPI</span>
+            </div>
+            <h3 class="work-title">Smile Bright Sophie</h3>
+            <p class="work-desc">Interactive voice agent managing dental clinic appointments, cancellations, and patient validation workflows.</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal-up" style="--d:80ms">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="MUSEUNITY College Portal" loading="lazy">
+          </div>
+          <div class="work-info">
+            <div class="work-tags">
+              <span>Firebase</span><span>UI/UX</span>
+            </div>
+            <h3 class="work-title">MUSEUNITY</h3>
+            <p class="work-desc">Centralized academic platform connecting students, faculty, and alumni with robust real-time data backends.</p>
+          </div>
+        </article>
+
+        <article class="work-card work-card--wide reveal-up" style="--d:160ms">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=80" alt="HomeEase Service Platform" loading="lazy">
+          </div>
+          <div class="work-info">
+            <div class="work-tags">
+              <span>n8n Automation</span><span>Full Stack</span>
+            </div>
+            <h3 class="work-title">HomeEase</h3>
+            <p class="work-desc">On-demand home services platform matching customers with local providers through intelligent automated workflows.</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal-up" style="--d:0ms">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Driver Distraction Detection" loading="lazy">
+          </div>
+          <div class="work-info">
+            <div class="work-tags">
+              <span>Computer Vision</span><span>AI</span>
+            </div>
+            <h3 class="work-title">Distraction Detection</h3>
+            <p class="work-desc">Road safety system using image processing to monitor and classify driver distraction levels in real time.</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal-up" style="--d:80ms">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="ADAS AI Research" loading="lazy">
+          </div>
+          <div class="work-info">
+            <div class="work-tags">
+              <span>Deep Learning</span><span>Research</span>
+            </div>
+            <h3 class="work-title">ADAS AI Research</h3>
+            <p class="work-desc">Evolution study of algorithmic perception pipelines in automated assistance and driving systems.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section section-dark" id="achievements">
+    <div class="container">
+      <div class="reveal-up">
+        <div class="section-label section-label-inv">Recognition</div>
+        <h2 class="section-title section-title-inv">Achievements</h2>
+        <div class="title-rule title-rule-inv"></div>
+      </div>
+      <div class="ach-layout reveal-up" style="--d:100ms">
+        <div class="ach-number">01</div>
+        <div class="ach-content">
+          <div class="ach-category">Defence Technology Innovation</div>
+          <h3 class="ach-title">Approved Soldier Protection System</h3>
+          <p class="ach-body">
+            Developed a safety enhancement solution designed to increase tactical protection for operational field agents. The system mechanics were formally reviewed and approved for engineering implementation by a defence technology organization.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <div class="section-label">Visual Journal</div>
+        <h2 class="section-title">Gallery</h2>
+        <div class="title-rule"></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gal-item reveal-up" style="--d:0ms"><img src="gallery1.jpg" alt="UX design for personal website" loading="lazy"><div class="gal-cap">UX design for personal website</div></div>
+        <div class="gal-item reveal-up" style="--d:50ms"><img src="gallery2.jpg" alt="Project mockups" loading="lazy"><div class="gal-cap">Project mockups and prototyping</div></div>
+        <div class="gal-item reveal-up" style="--d:100ms"><img src="gallery3.jpg" alt="Python mini projects" loading="lazy"><div class="gal-cap">Python mini projects collection</div></div>
+        <div class="gal-item reveal-up" style="--d:150ms"><img src="gallery4.jpg" alt="Nature photography" loading="lazy"><div class="gal-cap">Nature photography</div></div>
+        <div class="gal-item reveal-up" style="--d:200ms"><img src="gallery5.jpg" alt="Database learning" loading="lazy"><div class="gal-cap">Database learning progress</div></div>
+        <div class="gal-item reveal-up" style="--d:50ms"><img src="gallery6.jpg" alt="Figma prototypes" loading="lazy"><div class="gal-cap">Figma UX prototypes</div></div>
+        <div class="gal-item reveal-up" style="--d:100ms"><img src="gallery7.jpg" alt="Morning sunlight" loading="lazy"><div class="gal-cap">Morning stillness</div></div>
+        <div class="gal-item reveal-up" style="--d:150ms"><img src="gallery8.jpg" alt="Red stillness" loading="lazy"><div class="gal-cap">Red like calm chaos</div></div>
+        <div class="gal-item reveal-up" style="--d:200ms"><img src="gallery9.jpg" alt="Tracks and skies" loading="lazy"><div class="gal-cap">Between tracks and skies</div></div>
+        <div class="gal-item reveal-up" style="--d:250ms"><img src="gallery10.jpg" alt="Palace silhouette" loading="lazy"><div class="gal-cap">Palace silhouettes</div></div>
+      </div>
+      <div class="social-row reveal-up" style="--d:300ms">
+        <a href="https://www.linkedin.com/in/harshavardhana-v-439047294" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+        <a href="https://x.com/prince_harsha__?s=21" target="_blank" rel="noopener" class="social-link">X / Twitter</a>
+        <a href="https://vs.co/qh2h5z4h" target="_blank" rel="noopener" class="social-link">VSCO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section bg-alt" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-left reveal-left">
+          <div class="section-label">Contact</div>
+          <h2 class="section-title">Start a Conversation</h2>
+          <div class="title-rule"></div>
+          <p class="contact-intro">
+            Open to collaborative projects, software requirements, and system development opportunities. Reach out through any of the channels below.
+          </p>
+          <div class="contact-channels">
+            <div class="channel">
+              <div class="channel-label">Email</div>
+              <a href="mailto:harshavardhana0428@gmail.com" class="channel-value">harshavardhana0428@gmail.com</a>
+            </div>
+            <div class="channel">
+              <div class="channel-label">LinkedIn</div>
+              <a href="https://www.linkedin.com/in/harshavardhana-v-439047294" target="_blank" rel="noopener" class="channel-value">linkedin.com/in/harshavardhana-v</a>
+            </div>
+            <div class="channel">
+              <div class="channel-label">Location</div>
+              <span class="channel-value">Mysuru, Karnataka, India</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right reveal-right">
+          <div class="contact-card">
+            <div class="contact-card-label">Current Status</div>
+            <div class="contact-status-row">
+              <span class="status-dot"></span>
+              <span class="status-text">Available for opportunities</span>
+            </div>
+            <div class="contact-detail-list">
+              <div class="contact-detail-item">
+                <div class="cd-key">Role Preference</div>
+                <div class="cd-val">Full-time / Contract</div>
               </div>
-              
-              
-        </section>
-
-        <section id="contact" class="section">
-            <h3>Contact Me</h3>
-            <div class="contact">
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-                <div class="contact-info">
-                    <p>Alternatively, you can reach me at:</p>
-                    <p>Email: <a href="mailto:harshav0428@gmail.com">harshav0428@gmail.com</a></p>
-                </div>
+              <div class="contact-detail-item">
+                <div class="cd-key">Domain</div>
+                <div class="cd-val">AI Engineering, Full-Stack Development</div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="cd-key">Start Date</div>
+                <div class="cd-val">Immediately Available</div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="cd-key">Work Mode</div>
+                <div class="cd-val">Remote or On-site</div>
+              </div>
             </div>
-        </section>
+            <button onclick="openMailModal()" class="contact-cta-btn">Send an Email</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <footer>
-            <p>&copy; 2025 Harshavardhana V. All Rights Reserved.</p>
-        </footer>
-    </body>
+  <!-- EMAIL MODAL -->
+  <div class="mail-backdrop" id="mailBackdrop" onclick="closeMailModal()"></div>
+  <div class="mail-modal" id="mailModal" role="dialog" aria-modal="true" aria-label="Send an email">
+    <button class="mail-modal-close" onclick="closeMailModal()" aria-label="Close">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="mail-modal-label">Get in Touch</div>
+    <h3 class="mail-modal-title">Send a message</h3>
+    <p class="mail-modal-sub">Copy the address below or open Gmail directly.</p>
+    <div class="mail-address-row">
+      <span class="mail-address-text" id="emailText">harshavardhana0428@gmail.com</span>
+      <button class="mail-copy-btn" id="copyBtn" onclick="copyEmail()" aria-label="Copy email">
+        <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span id="copyLabel">Copy</span>
+      </button>
+    </div>
+    <div class="mail-modal-actions">
+      <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=harshavardhana0428@gmail.com&su=Hello%20Harshavardhana" target="_blank" rel="noopener" class="mail-gmail-btn">Open in Gmail</a>
+      <a href="mailto:harshavardhana0428@gmail.com?subject=Hello%20Harshavardhana" class="mail-default-btn">Open Mail App</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Harshavardhana V</span>
+      <span class="footer-copy">2026. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    /* ── THEME ── */
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    if (localStorage.getItem('theme') === 'dark') html.dataset.theme = 'dark';
+    themeBtn.addEventListener('click', () => {
+      const dark = html.dataset.theme === 'dark';
+      dark ? delete html.dataset.theme : (html.dataset.theme = 'dark');
+      localStorage.setItem('theme', dark ? 'light' : 'dark');
+    });
+
+    /* ── MOBILE MENU ── */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    }));
+
+    /* ── NAV SCROLL STYLE ── */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    /* ── SCROLL REVEAL ── */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const delay = el.style.getPropertyValue('--d') || '0ms';
+          setTimeout(() => el.classList.add('in-view'), parseInt(delay));
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => io.observe(el));
+
+    /* ── HERO FADE-UP on load ── */
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-up').forEach(el => {
+        const delay = el.style.getPropertyValue('--d') || '0ms';
+        setTimeout(() => el.classList.add('in-view'), 200 + parseInt(delay));
+      });
+    });
+
+    /* ── ACTIVE NAV LINK ── */
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      });
+      navLinks.forEach(l => {
+        l.classList.toggle('active', l.dataset.section === current);
+      });
+    });
+    /* ── EMAIL MODAL ── */
+    function openMailModal() {
+      document.getElementById('mailModal').classList.add('open');
+      document.getElementById('mailBackdrop').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMailModal() {
+      document.getElementById('mailModal').classList.remove('open');
+      document.getElementById('mailBackdrop').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function copyEmail() {
+      navigator.clipboard.writeText('harshavardhana0428@gmail.com').then(() => {
+        const lbl = document.getElementById('copyLabel');
+        lbl.textContent = 'Copied!';
+        setTimeout(() => lbl.textContent = 'Copy', 2000);
+      });
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMailModal(); });
+  </script>
+
+</body>
 </html>
